@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: textSummarizer
+Version: 0.0.0
+Summary: A small python package for NLP app
+Home-page: https://github.com/aadish/textsummarizer
+Author: aadish
+Author-email: aadisharma8441@gmail.com
+Project-URL: Bug Tracker, https://github.com/aadish/textsummarizer/issues
+License-File: LICENSE
+
+# textsummarizer

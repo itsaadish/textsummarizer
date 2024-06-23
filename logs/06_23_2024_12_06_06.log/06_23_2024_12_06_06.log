@@ -1,0 +1,8 @@
+[ 2024-06-23 12:06:11,344 ] 75 uvicorn.error - INFO - Started server process [35350]
+[ 2024-06-23 12:06:11,344 ] 47 uvicorn.error - INFO - Waiting for application startup.
+[ 2024-06-23 12:06:11,344 ] 61 uvicorn.error - INFO - Application startup complete.
+[ 2024-06-23 12:06:11,344 ] 207 uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+[ 2024-06-23 12:19:56,828 ] 253 uvicorn.error - INFO - Shutting down
+[ 2024-06-23 12:19:56,932 ] 66 uvicorn.error - INFO - Waiting for application shutdown.
+[ 2024-06-23 12:19:56,933 ] 77 uvicorn.error - INFO - Application shutdown complete.
+[ 2024-06-23 12:19:56,934 ] 85 uvicorn.error - INFO - Finished server process [35350]

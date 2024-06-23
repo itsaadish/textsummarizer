@@ -1,0 +1,50 @@
+[ 2024-06-23 12:07:43,408 ] 58 datasets - INFO - PyTorch version 2.3.1 available.
+[ 2024-06-23 12:07:46,393 ] 12 root - INFO - >>>>>> stage Data Ingestion stage started <<<<<<
+[ 2024-06-23 12:07:46,395 ] 49 root - INFO - yaml file: config/config.yaml loaded successfully
+[ 2024-06-23 12:07:46,396 ] 49 root - INFO - yaml file: params.yaml loaded successfully
+[ 2024-06-23 12:07:46,396 ] 69 root - INFO - created directory at: artifacts
+[ 2024-06-23 12:07:46,396 ] 69 root - INFO - created directory at: artifacts/data_ingestion
+[ 2024-06-23 12:07:46,396 ] 25 root - INFO - File already exists of size: ~ 7718 KB
+[ 2024-06-23 12:07:46,438 ] 15 root - INFO - >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[ 2024-06-23 12:07:46,438 ] 25 root - INFO - >>>>>> stage Data Validation stage started <<<<<<
+[ 2024-06-23 12:07:46,439 ] 49 root - INFO - yaml file: config/config.yaml loaded successfully
+[ 2024-06-23 12:07:46,440 ] 49 root - INFO - yaml file: params.yaml loaded successfully
+[ 2024-06-23 12:07:46,440 ] 69 root - INFO - created directory at: artifacts
+[ 2024-06-23 12:07:46,440 ] 69 root - INFO - created directory at: artifacts/data_validation
+[ 2024-06-23 12:07:46,441 ] 28 root - INFO - >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[ 2024-06-23 12:07:46,441 ] 37 root - INFO - >>>>>> stage Data Transformation stage started <<<<<<
+[ 2024-06-23 12:07:46,442 ] 49 root - INFO - yaml file: config/config.yaml loaded successfully
+[ 2024-06-23 12:07:46,443 ] 49 root - INFO - yaml file: params.yaml loaded successfully
+[ 2024-06-23 12:07:46,443 ] 69 root - INFO - created directory at: artifacts
+[ 2024-06-23 12:07:46,443 ] 69 root - INFO - created directory at: artifacts/data_transformation
+[ 2024-06-23 12:07:53,422 ] 40 root - INFO - >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[ 2024-06-23 12:07:53,423 ] 49 root - INFO - *******************
+[ 2024-06-23 12:07:53,423 ] 50 root - INFO - >>>>>> stage Model Trainer stage started <<<<<<
+[ 2024-06-23 12:07:53,424 ] 49 root - INFO - yaml file: config/config.yaml loaded successfully
+[ 2024-06-23 12:07:53,425 ] 49 root - INFO - yaml file: params.yaml loaded successfully
+[ 2024-06-23 12:07:53,425 ] 69 root - INFO - created directory at: artifacts
+[ 2024-06-23 12:07:53,425 ] 69 root - INFO - created directory at: artifacts/model_trainer
+[ 2024-06-23 12:18:38,767 ] 55 root - ERROR - Using the `Trainer` with `PyTorch` requires `accelerate>=0.21.0`: Please run `pip install transformers[torch]` or `pip install accelerate -U`
+Traceback (most recent call last):
+  File "/Users/Aadish/Documents/textSummarizer/main.py", line 52, in <module>
+    model_trainer.main()
+  File "/Users/Aadish/Documents/textSummarizer/src/textSummarizer/pipeline/stage_4_model_trainer.py", line 15, in main
+    model_trainer_config.train()
+  File "/Users/Aadish/Documents/textSummarizer/src/textSummarizer/conponents/model_trainer.py", line 35, in train
+    trainer_args = TrainingArguments(
+  File "<string>", line 128, in __init__
+  File "/Users/Aadish/Documents/textsummarizer/venv/lib/python3.9/site-packages/transformers/training_args.py", line 1641, in __post_init__
+    and (self.device.type == "cpu" and not is_torch_greater_or_equal_than_2_3)
+  File "/Users/Aadish/Documents/textsummarizer/venv/lib/python3.9/site-packages/transformers/training_args.py", line 2149, in device
+    return self._setup_devices
+  File "/Users/Aadish/Documents/textsummarizer/venv/lib/python3.9/site-packages/transformers/utils/generic.py", line 59, in __get__
+    cached = self.fget(obj)
+  File "/Users/Aadish/Documents/textsummarizer/venv/lib/python3.9/site-packages/transformers/training_args.py", line 2055, in _setup_devices
+    raise ImportError(
+ImportError: Using the `Trainer` with `PyTorch` requires `accelerate>=0.21.0`: Please run `pip install transformers[torch]` or `pip install accelerate -U`
